@@ -1,0 +1,107 @@
+﻿@model XMLViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+        <h2>XML loan request service test</h2>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <h4>Sample XML</h4>
+<textarea class="form-control" rows="44" style="border:none;">
+<?xml version="1.0" encoding="utf-8" ?>
+<tss_loan_request>
+    <data name="sub_id">8764321</data>
+    <data name="bank_account_type">CHECKING</data>
+    <data name="bank_name">Banco de Costa Rica</data>
+    <data name="client_url_root">bancobcr.com</data>
+    <data name="customer_id">206830685</data>
+    <data name="employer_length_months">18</data>
+    <data name="employer_name">FlexTech.Net</data>
+    <data name="ext_work" />
+    <data name="home_city">Cartago</data>
+    <data name="home_state">CT</data>
+    <data name="home_street">4758 n 30th st</data>
+    <data name="home_zip">53209</data>
+    <data name="income_date1_d">19</data>
+    <data name="income_date1_m">01</data>
+    <data name="income_date1_y">2018</data>
+    <data name="income_date2_d">02</data>
+    <data name="income_date2_m">02</data>
+    <data name="income_date2_y">2018</data>
+    <data name="income_frequency">WEEKLY</data>
+    <data name="income_amount">570</data>
+    <data name="income_type">EMPLOYMENT</data>
+    <data name="loan_amount_desired">500</data>
+    <data name="military">FALSE</data>
+    <data name="name_first">Enmanuelle</data>
+    <data name="name_last">Acuna</data>
+    <data name="name_middle" />
+    <data name="name_title">MR</data>
+    <data name="phone_home" />
+    <data name="phone_cell">83156727</data>
+    <data name="date_dob_d">7</data>
+    <data name="date_dob_m">7</data>
+    <data name="date_dob_y">1984</data>
+    <data name="residence_length_months">12</data>
+    <data name="residence_type">OWN</data>
+    <data name="ssn_part_1">000</data>
+    <data name="ssn_part_2">00</data>
+    <data name="ssn_part_3">0000</data>
+    <data name="state_id_number">0000406</data>
+    <data name="state_issued_id">WI</data>
+    <data name="bank_check_number" />
+</tss_loan_request>
+</textarea>
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+        <h4>@Html.DisplayNameFor(model => model.XMLEntrada)</h4>
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post)) {
+            <div class="form-group">
+                @Html.TextAreaFor(model => model.XMLEntrada, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group">
+                @Html.DisplayFor(model => model.Respuesta)
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Enviar XML" class="btn btn-primary" />
+            </div>
+        }
+    </div>
+</div>
+
+<div class="jumbotron">
+    <h2>ASP.NET</h2>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Getting started</h4>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h4>Get more libraries</h4>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h4>Web Hosting</h4>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+

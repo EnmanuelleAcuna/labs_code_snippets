@@ -1,0 +1,15 @@
+<add name="SchoolEntities" connectionString="metadata=res://*/ModelEF.csdl|res://*/ModelEF.ssdl|res://*/ModelEF.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\MSSQLLocalDB;initial catalog=School;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+
+<add name="SchoolEntities" connectionString="metadata=res://*/ModeloEF.csdl|res://*/ModeloEF.ssdl|res://*/ModeloEF.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EA-INSPIRON-14;initial catalog=School;persist security info=True;user id=Enmanuelle Acuña;password=NFS@1991;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+
+<add name="ProyectoProgramacion5Entities" connectionString="metadata=res://*/GeografiaModel.csdl|res://*/GeografiaModel.ssdl|res://*/GeografiaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=ProyectoProgramacion5;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+
+<add name="ProyectoProgramacion5ConnectionString" connectionString="Data Source=localhost;Initial Catalog=ProyectoProgramacion5;Integrated Security=True" providerName="System.Data.SqlClient" />
+
+<add name="SchoolEntities" connectionString="metadata=res://*/ModelEF.csdl|res://*/ModelEF.ssdl|res://*/ModelEF.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(localdb)\MSSQLLocalDB;initial catalog=School;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" /> 
+
+<!--<add name="SchoolEntities" connectionString="metadata=res://*/ModeloEF.csdl|res://*/ModeloEF.ssdl|res://*/ModeloEF.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=EA-INSPIRON-14;initial catalog=School;persist security info=True;user id=Enmanuelle Acuña;password=NFS@1991;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />--> 
+
+<add name="ProyectoProgramacion5Entities" connectionString="metadata=res://*/GeografiaModel.csdl|res://*/GeografiaModel.ssdl|res://*/GeografiaModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=localhost;initial catalog=ProyectoProgramacion5;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" /> 
+
+<add name="ProyectoProgramacion5ConnectionString" connectionString="Data Source=localhost;Initial Catalog=ProyectoProgramacion5;Integrated Security=True" providerName="System.Data.SqlClient" /> 

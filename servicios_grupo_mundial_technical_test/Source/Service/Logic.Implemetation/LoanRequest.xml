@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tss_loan_request>
+  <data name="sub_id">7545320</data>
+  <data name="bank_account_type">CHECKING</data>
+  <data name="bank_name">TRUSTONE FINANCIAL FEDERAL CR UN</data>
+  <data name="client_url_root">lendyou.com</data>
+  <data name="customer_id">60080928</data>
+  <data name="employer_length_months">13</data>
+  <data name="employer_name">walgreens</data>
+  <data name="ext_work" />
+  <data name="home_city">Milwaukee</data>
+  <data name="home_state">WI</data>
+  <data name="home_street">4758 n 30th st</data>
+  <data name="home_zip">53209</data>
+  <data name="income_date1_d">19</data>
+  <data name="income_date1_m">01</data>
+  <data name="income_date1_y">2018</data>
+  <data name="income_date2_d">02</data>
+  <data name="income_date2_m">02</data>
+  <data name="income_date2_y">2018</data>
+  <data name="income_frequency">WEEKLY</data>
+  <data name="income_amount">570</data>
+  <data name="income_type">EMPLOYMENT</data>
+  <data name="loan_amount_desired">500</data>
+  <data name="military">FALSE</data>
+  <data name="name_first">Lisa</data>
+  <data name="name_last">Price</data>
+  <data name="name_middle" />
+  <data name="name_title">MR</data>
+  <data name="phone_home">7981541924</data>
+  <data name="phone_cell">1541541924</data>
+  <data name="date_dob_d">7</data>
+  <data name="date_dob_m">7</data>
+  <data name="date_dob_y">1984</data>
+  <data name="residence_length_months">12</data>
+  <data name="residence_type">OWN</data>
+  <data name="ssn_part_1">000</data>
+  <data name="ssn_part_2">00</data>
+  <data name="ssn_part_3">0000</data>
+  <data name="state_id_number">0000406</data>
+  <data name="state_issued_id">WI</data>
+  <data name="bank_check_number" />
+</tss_loan_request>

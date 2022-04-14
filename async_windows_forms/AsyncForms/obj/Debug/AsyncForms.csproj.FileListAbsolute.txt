@@ -1,0 +1,9 @@
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\bin\Debug\AsyncForms.exe.config
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\bin\Debug\AsyncForms.exe
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\bin\Debug\AsyncForms.pdb
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.csprojAssemblyReference.cache
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.Form1.resources
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.Properties.Resources.resources
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.csproj.GenerateResource.cache
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.exe
+C:\Users\emanu\Source\Repos\AsyncForms\AsyncForms\obj\Debug\AsyncForms.pdb
