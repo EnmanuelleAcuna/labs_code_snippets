@@ -1,0 +1,6 @@
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\obj\Debug\ClassLibrary.csproj.AssemblyReference.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ClassLibrary\obj\Debug\ClassLibrary.pdb

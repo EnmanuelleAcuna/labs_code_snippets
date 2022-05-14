@@ -1,0 +1,14 @@
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\bin\Debug\ServerApp.exe.config
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\bin\Debug\ServerApp.exe
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\bin\Debug\ServerApp.pdb
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\bin\Debug\ClassLibrary.dll
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\bin\Debug\ClassLibrary.pdb
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.csproj.AssemblyReference.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.Properties.Resources.resources
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.csproj.GenerateResource.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.csproj.CoreCompileInputs.cache
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.csproj.CopyComplete
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.exe
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.pdb
+C:\Users\emanu\Source\Repos\GitHub\labs_code_snippets\tcp_client_server\ServerApp\ServerApp\obj\Debug\ServerApp.frmServidor.resources
