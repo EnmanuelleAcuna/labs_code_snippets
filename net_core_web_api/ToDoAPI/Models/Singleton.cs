@@ -27,7 +27,7 @@ namespace ToDoAPI.Models
 
 	class ProgramST
 	{
-		static void Main(string[] args)
+		static void MainST(string[] args)
 		{
 			// Both are the same in memory
 			SingletonST s1 = SingletonST.GetInstance();
@@ -86,7 +86,7 @@ namespace ToDoAPI.Models
 
 	class ProgramMT
 	{
-		static void Main(string[] args)
+		static void MainMT(string[] args)
 		{
 			Console.WriteLine();
 
