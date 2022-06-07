@@ -15,7 +15,7 @@ public class UpdateInvoiceRequestModel
 	public Invoice ToDomainModel()
 	{
 		Invoice invoice = InvoiceFactory.GetInvoice(PaymentMethod.ToPaymentMethod(), new Guid(Id));
-		invoice.FillInvoice(Convert.ToDateTime(Date), Amount, Payee, Detail);
+		invoice.FillInvoice(Date.ToDateTime(), Amount, Payee, Detail);
 		return invoice;
 	}
 }

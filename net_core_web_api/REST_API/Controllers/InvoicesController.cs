@@ -23,12 +23,13 @@ namespace REST_API.Controllers
 
 		// GET: api/invoices
 		[HttpGet]
-		public async Task<ActionResult<IList<Invoice>>> GetAll()
+		public async Task<ActionResult<IList<InvoiceResponseModel>>> GetAll()
 		{
 			try
 			{
 				IList<Invoice> invoices = await _repo.ReadAll();
-				return Ok(invoices);
+				IEnumerable<InvoiceResponseModel> response = invoices.Select(i => new InvoiceResponseModel(i));
+				return Ok(response);
 			}
 			catch (NullReferenceException)
 			{
@@ -44,7 +45,8 @@ namespace REST_API.Controllers
 			{
 				if (string.IsNullOrEmpty(id)) return NotFound();
 				Invoice invoice = await _repo.ReadById(new Guid(id));
-				return Ok(invoice);
+				InvoiceResponseModel response = new InvoiceResponseModel(invoice);
+				return Ok(response);
 			}
 			catch (NullReferenceException)
 			{
