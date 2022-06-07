@@ -1,4 +1,5 @@
 using System.Text.Json;
+using REST_API.Models.Invoices;
 using REST_API.Models.ToDoList;
 
 namespace REST_API.Extras;
@@ -40,5 +41,24 @@ public static class Extensions
 		// 	default:
 		// 		return PaymentMethod.Cash;
 		// }
+	}
+
+	public static PaymentMethod GetPaymentMethod(this Invoice invoice)
+	{
+		PaymentMethod paymentMethod = PaymentMethod.Cash;
+
+		if (invoice is DebitCardPaidInvoice) paymentMethod = PaymentMethod.DebitCard;
+		if (invoice is TransferPaidInvoice) paymentMethod = PaymentMethod.Transfer;
+
+		return paymentMethod;
+	}
+
+	public static DateTime ToDateTime(this string dateTime)
+	{
+		// Expected format: 28/05/2022
+		int day = Convert.ToInt16(dateTime.Substring(0, 2));
+		int month = Convert.ToInt16(dateTime.Substring(3, 2));
+		int year = Convert.ToInt16(dateTime.Substring(6, 4));
+		return new DateTime(year, month, day);
 	}
 }
