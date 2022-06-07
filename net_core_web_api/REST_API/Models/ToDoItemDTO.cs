@@ -1,4 +1,4 @@
-namespace ToDoAPI.Models
+namespace REST_API.Models
 {
 	public class ToDoItemDTO
 	{
