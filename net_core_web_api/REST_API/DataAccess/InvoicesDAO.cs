@@ -50,7 +50,7 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 
 			invoiceDB.InvoiceDate = invoice.Date;
 			invoiceDB.Amount = invoice.Amount;
-			invoiceDB.PaymentMethod = GetInvoicePaymentMethod(invoice).ToString();
+			invoiceDB.PaymentMethod = invoice.GetPaymentMethod().ToString();
 			invoiceDB.Payee = invoice.Payee;
 			invoiceDB.Detail = invoice.Detail;
 
@@ -90,22 +90,12 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 			Id = invoice.Id.ToString(),
 			InvoiceDate = invoice.Date,
 			Amount = invoice.Amount,
-			PaymentMethod = GetInvoicePaymentMethod(invoice).ToString(),
+			PaymentMethod = invoice.GetPaymentMethod().ToString(),
 			Payee = invoice.Payee,
 			Detail = invoice.Detail
 		};
 
 		return invoiceDB;
-	}
-
-	private static PaymentMethod GetInvoicePaymentMethod(DomainModel.Invoice invoice)
-	{
-		PaymentMethod paymentMethod = PaymentMethod.Cash;
-
-		if (invoice is DomainModel.DebitCardPaidInvoice) paymentMethod = PaymentMethod.DebitCard;
-		if (invoice is DomainModel.TransferPaidInvoice) paymentMethod = PaymentMethod.Transfer;
-
-		return paymentMethod;
 	}
 
 	private bool InvoiceExists(string id)
