@@ -25,7 +25,7 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 	{
 		if (_context.Invoices == null) throw new NullReferenceException();
 
-		Invoice invoiceDB = await _context.Invoices.FindAsync(id);
+		Invoice invoiceDB = await _context.Invoices.FindAsync(id.ToString());
 
 		if (invoiceDB == null) throw new NullReferenceException();
 
@@ -67,7 +67,7 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 	{
 		if (_context.Invoices == null) throw new NullReferenceException();
 
-		Invoice invoice = await _context.Invoices.FindAsync(id);
+		Invoice invoice = await _context.Invoices.FindAsync(id.ToString());
 
 		if (invoice == null) throw new NullReferenceException();
 
