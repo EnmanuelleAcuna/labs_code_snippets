@@ -10,7 +10,7 @@ using REST_API.Models.Invoices;
 
 namespace REST_API.Controllers
 {
-	[Route("api/[controller]")]
+	[Route("[controller]")]
 	[ApiController]
 	public class InvoicesController : ControllerBase
 	{
