@@ -4,26 +4,26 @@ namespace REST_API.Models.Invoices;
 
 public class InvoiceFactory
 {
-	public static Invoice GetNewInvoice(PaymentMethod paymentMethod)
+	public static Invoice GetNewInvoice(PaymentMethods paymentMethod)
 	{
 		switch (paymentMethod)
 		{
-			case PaymentMethod.Transfer:
+			case PaymentMethods.Transfer:
 				return new TransferPaidInvoice(Guid.NewGuid());
-			case PaymentMethod.DebitCard:
+			case PaymentMethods.DebitCard:
 				return new DebitCardPaidInvoice(Guid.NewGuid());
 			default:
 				return new CashPaidInvoice(Guid.NewGuid());
 		}
 	}
 
-	public static Invoice GetInvoice(PaymentMethod paymentMethod, Guid id)
+	public static Invoice GetInvoice(PaymentMethods paymentMethod, Guid id)
 	{
 		switch (paymentMethod)
 		{
-			case PaymentMethod.Transfer:
+			case PaymentMethods.Transfer:
 				return new TransferPaidInvoice(id);
-			case PaymentMethod.DebitCard:
+			case PaymentMethods.DebitCard:
 				return new DebitCardPaidInvoice(id);
 			default:
 				return new CashPaidInvoice(id);

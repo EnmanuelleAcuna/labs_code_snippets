@@ -11,24 +11,24 @@ public static class Extensions
 		return JsonSerializer.Serialize(toDoItem);
 	}
 
-	public static string ToString(this PaymentMethod paymentMethod)
+	public static string ToString(this PaymentMethods paymentMethod)
 	{
 		switch (paymentMethod)
 		{
-			case PaymentMethod.Cash:
+			case PaymentMethods.Cash:
 				return "Cash";
-			case PaymentMethod.DebitCard:
+			case PaymentMethods.DebitCard:
 				return "DebitCard";
-			case PaymentMethod.Transfer:
+			case PaymentMethods.Transfer:
 				return "Transfer";
 			default:
 				return string.Empty;
 		}
 	}
 
-	public static PaymentMethod ToPaymentMethod(this string paymentMethod)
+	public static PaymentMethods ToPaymentMethod(this string paymentMethod)
 	{
-		return (PaymentMethod)Enum.Parse(typeof(PaymentMethod), paymentMethod);
+		return (PaymentMethods)Enum.Parse(typeof(PaymentMethods), paymentMethod);
 
 		// switch (paymentMethod.ToLower())
 		// {
@@ -43,12 +43,12 @@ public static class Extensions
 		// }
 	}
 
-	public static PaymentMethod GetPaymentMethod(this Invoice invoice)
+	public static PaymentMethods GetPaymentMethod(this Invoice invoice)
 	{
-		PaymentMethod paymentMethod = PaymentMethod.Cash;
+		PaymentMethods paymentMethod = PaymentMethods.Cash;
 
-		if (invoice is DebitCardPaidInvoice) paymentMethod = PaymentMethod.DebitCard;
-		if (invoice is TransferPaidInvoice) paymentMethod = PaymentMethod.Transfer;
+		if (invoice is DebitCardPaidInvoice) paymentMethod = PaymentMethods.DebitCard;
+		if (invoice is TransferPaidInvoice) paymentMethod = PaymentMethods.Transfer;
 
 		return paymentMethod;
 	}
@@ -60,5 +60,31 @@ public static class Extensions
 		int month = Convert.ToInt16(dateTime.Substring(3, 2));
 		int year = Convert.ToInt16(dateTime.Substring(6, 4));
 		return new DateTime(year, month, day);
+	}
+
+	public static Guid ToGuid(this string text)
+	{
+		if (string.IsNullOrEmpty(text)) return new Guid();
+
+		if (string.IsNullOrWhiteSpace(text)) return new Guid();
+
+		Guid guid = new Guid(text);
+
+		return guid;
+	}
+
+	public static bool IsValid(this Guid secret)
+	{
+		if (secret.Equals(Guid.Empty)) return false;
+
+		if (!Guid.TryParse(secret.ToString(), out Guid idObjeto)) return false;
+
+		if (secret.Equals(new Guid())) return false;
+
+		Guid uuid = new Guid("5a16b6b7-cddb-4752-9eb0-54abf2d43a68");
+
+		if (secret.Equals(uuid)) return true;
+
+		return false;
 	}
 }

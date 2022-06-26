@@ -1,6 +1,6 @@
 namespace REST_API.Extras;
 
-public enum PaymentMethod
+public enum PaymentMethods
 {
 	DebitCard,
 	Cash,

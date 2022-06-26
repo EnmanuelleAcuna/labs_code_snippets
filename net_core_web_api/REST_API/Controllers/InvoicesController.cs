@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using REST_API.DataAccess;
+using REST_API.Extras;
 using REST_API.Models;
 using REST_API.Models.Invoices;
 
@@ -44,8 +45,11 @@ namespace REST_API.Controllers
 			try
 			{
 				if (string.IsNullOrEmpty(id)) return NotFound();
+
 				Invoice invoice = await _repo.ReadById(new Guid(id));
+
 				InvoiceResponseModel response = new InvoiceResponseModel(invoice);
+
 				return Ok(response);
 			}
 			catch (NullReferenceException)
@@ -61,7 +65,10 @@ namespace REST_API.Controllers
 		{
 			try
 			{
+				if (!model.Secret.ToGuid().IsValid()) return BadRequest();
+
 				Invoice invoice = model.ToDomainModel();
+
 				await _repo.Create(invoice);
 
 				// return CreatedAtAction("GetToDoItem", new { id = toDoItem.Id }, toDoItem);
@@ -70,6 +77,10 @@ namespace REST_API.Controllers
 			catch (NullReferenceException)
 			{
 				return NotFound();
+			}
+			catch (FormatException)
+			{
+				return BadRequest();
 			}
 		}
 
@@ -81,6 +92,8 @@ namespace REST_API.Controllers
 			try
 			{
 				if (id != model.Id) return BadRequest();
+
+				if (model.Secret.ToGuid().IsValid()) return BadRequest();
 
 				Invoice invoice = model.ToDomainModel();
 
@@ -95,19 +108,21 @@ namespace REST_API.Controllers
 		}
 
 		// DELETE: api/invoices/5
-		[HttpDelete("{id}")]
-		public async Task<IActionResult> Delete(string id)
-		{
-			try
-			{
-				if (string.IsNullOrEmpty(id)) return NotFound();
-				await _repo.Delete(new Guid(id));
-				return NoContent();
-			}
-			catch (NullReferenceException)
-			{
-				return NotFound();
-			}
-		}
+		// [HttpDelete("{id}")]
+		// public async Task<IActionResult> Delete(string id)
+		// {
+		// 	try
+		// 	{
+		// 		if (string.IsNullOrEmpty(id)) return NotFound();
+
+		// 		await _repo.Delete(new Guid(id));
+
+		// 		return NoContent();
+		// 	}
+		// 	catch (NullReferenceException)
+		// 	{
+		// 		return NotFound();
+		// 	}
+		// }
 	}
 }

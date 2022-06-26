@@ -77,7 +77,7 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 
 	private static DomainModel.Invoice ToDomainModel(Invoice invoiceDB)
 	{
-		PaymentMethod paymentMethod = invoiceDB.PaymentMethod.ToPaymentMethod();
+		PaymentMethods paymentMethod = invoiceDB.PaymentMethod.ToPaymentMethod();
 		DomainModel.Invoice invoice = DomainModel.InvoiceFactory.GetInvoice(paymentMethod, new Guid(invoiceDB.Id));
 		invoice.FillInvoice(invoiceDB.InvoiceDate, invoiceDB.Amount, invoiceDB.Payee, invoiceDB.Detail);
 		return invoice;

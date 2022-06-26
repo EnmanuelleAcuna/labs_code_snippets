@@ -11,6 +11,7 @@ public class UpdateInvoiceRequestModel
 	public decimal Amount { get; set; }
 	public string Payee { get; set; }
 	public string Detail { get; set; }
+	public string Secret { get; set; }
 
 	public Invoice ToDomainModel()
 	{
