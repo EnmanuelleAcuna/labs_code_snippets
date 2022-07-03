@@ -18,7 +18,7 @@ public class InvoicesDAO : ICRUDBase<DomainModel.Invoice>
 	{
 		if (_context.Invoices == null) throw new NullReferenceException();
 
-		return await _context.Invoices.Select(i => ToDomainModel(i)).ToListAsync();
+		return await _context.Invoices.OrderByDescending(i => i.InvoiceDate).Select(i => ToDomainModel(i)).ToListAsync();
 	}
 
 	public async Task<DomainModel.Invoice> ReadById(Guid id)
