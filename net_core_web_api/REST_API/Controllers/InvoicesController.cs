@@ -93,7 +93,7 @@ namespace REST_API.Controllers
 			{
 				if (id != model.Id) return BadRequest();
 
-				if (model.Secret.ToGuid().IsValid()) return BadRequest();
+				if (!model.Secret.ToGuid().IsValid()) return BadRequest();
 
 				Invoice invoice = model.ToDomainModel();
 
